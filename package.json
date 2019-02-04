@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "start": "node ./server.js",
-    "local": "cd client && ng build"
   },
   "dependencies": {
     "async": "^2.6.1",
