@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const passport = require('passport');
+const cors = require('cors');
 
 // Routes modules
 const usersRouter = require('./routes/users');
@@ -10,6 +11,8 @@ const authRouter = require('./routes/auth');
 const messagesRouter = require('./routes/messages');
 
 const app = express();
+
+app.use(cors());
 
 // Passport middleware
 app.use(passport.initialize());
