@@ -182,9 +182,11 @@ router.post(
       // Update user avatar
       User.findByIdAndUpdate(req.user.id, { $set: profile }, { new: true })
         .then(() => {
+          console.log('then');
           res.json({ success: true });
         })
         .catch(err => {
+          console.log(err);
           sendError(res, 500, errMessages.server, err);
         });
     }
